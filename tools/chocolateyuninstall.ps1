@@ -3,16 +3,16 @@
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   softwareName   = '3CX*'
-  fileType       = 'MSI' 
+  fileType       = 'MSI'
   silentArgs     = "/qn /norestart"
-  validExitCodes = @(0, 3010, 1605, 1614, 1641) 
+  validExitCodes = @(0, 3010, 1605, 1614, 1641)
 }
 
 $uninstalled = $false
 [array]$key = Get-UninstallRegistryKey -SoftwareName $packageArgs['softwareName']
 
 if ($key.Count -eq 1) {
-  $key | % { 
+  $key | % {
     $packageArgs['file'] = "$($_.UninstallString)"
     if ($packageArgs['fileType'] -eq 'MSI') {
       $packageArgs['silentArgs'] = "$($_.PSChildName) $($packageArgs['silentArgs'])"
