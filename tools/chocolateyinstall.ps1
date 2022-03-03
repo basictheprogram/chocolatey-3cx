@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 $fullPackage = "3CXPhoneforWindows16.msi"
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url = 'https://downloads.3cx.com/downloads/' + $fullPackage
+$url = 'https://downloads-global.3cx.com/downloads/' + $fullPackage
 
 $packageArgs = @{
     packageName    = $env:ChocolateyPackageName
