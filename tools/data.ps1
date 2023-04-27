@@ -1,5 +1,5 @@
 @{
     url = 'https://1243.3cx.cloud/webclient/api/app/windows'
-    checksum = '0031836e535ec47599e42070028c73fada617b2a9fd597034de76f43599162a7'
+    checksum = '908d6d0119d9a943c123bab1c8de8201868e3ccc9d6df5dbf075d27b0129a09e'
     checksumType = 'sha256'
 }
